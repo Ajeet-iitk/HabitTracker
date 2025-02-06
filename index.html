@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21-Day Habit Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> -->
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>21-Day Habit Tracker</h1>
+
+        <!-- Display Number of Habits -->
+        <p id="habit-count" class="habit-count">Total Habits: 0</p>
+
+        <!-- Add New Habit -->
+        <div class="add-habit">
+            <input type="text" id="new-habit" placeholder="Add a new habit...">
+            <button id="add-habit-btn">+</button>
+        </div>
+
+        <!-- Habit List -->
+        <div id="habit-list"></div>
+
+        <!-- Reminder Section -->
+        <div class="reminder">
+            <h2>Set Daily Reminder</h2>
+            <div class="reminder-inputs">
+                <input type="datetime-local" id="reminder-datetime">
+                <button id="set-reminder-btn">Set Reminder</button>
+            </div>
+            <p id="reminder-message" class="reminder-message"></p>
+        </div>
+
+        <!-- Information Modal -->
+        <div id="info-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Habit Information</h2>
+                <p><strong>Habit Name:</strong> <span id="info-habit-name"></span></p>
+                <p><strong>Date Created:</strong> <span id="info-creation-date"></span></p>
+                <p><strong>Reminder:</strong> <span id="info-reminder-status"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
