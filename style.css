@@ -277,12 +277,54 @@ button:hover {
     cursor: pointer;
 }
 
-/* Drag-and-Drop Styles */
-.habit-item.dragging {
-    opacity: 0.5; /* Make the dragged item semi-transparent */
-    background-color: #4a4b4f; /* Change background color while dragging */
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+    }
 
-.habit-item.over {
-    border: 2px dashed #6c7ae0; /* Highlight the drop target */
+    h1 {
+        font-size: 2rem;
+    }
+
+    .add-habit {
+        flex-direction: column;
+    }
+
+    #new-habit {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #add-habit-btn {
+        width: 100%;
+        height: auto;
+        font-size: 1.2rem;
+    }
+
+    .habit-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .days-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .day-box {
+        font-size: 0.8rem;
+    }
+
+    .reminder-inputs {
+        flex-direction: column;
+    }
+
+    #reminder-datetime {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #set-reminder-btn {
+        width: 100%;
+    }
 }
